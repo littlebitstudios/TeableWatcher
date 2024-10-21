@@ -1,0 +1,23 @@
+teable_url: "https://app.teable.io" # URL of your Teable instance; if using the official instance this should be "https://app.teable.io"
+teable_api_key: "KEY_HERE" # get an API key by clicking your name (bottom left) -> Access Token -> Personal access tokens -> Create new token
+check_interval: 60 # how often to check for changes in seconds
+email_sender_settings:
+  smtp_server: "smtp.example.com" # SMTP server to use for sending emails
+  smtp_port: 465 # Port to use for SMTP, usually 465 or 587
+  smtp_user: "someone@example.com" # this is usually the same as the sender email
+  smtp_pass: "PASSWORD_HERE" # password for the SMTP server
+  sender_email: "someone@example.com" # email address to send emails from
+  sender_name: "Teable" # the name that emails will appear to be from
+receivers: # list of emails to send to
+  - "someone_else@example.com" 
+watched_bases: # list of bases to watch, this will watch all tables in a base
+  - "bseXXXXXXXXXXXXX" # base ID
+ignored_tables: # list of tables to ignore when watching entire bases
+  - baseid: "bseXXXXXXXX"
+    tableid: "tblXXXXXXXX"
+watched_tables: # list of tables to watch individually
+  - baseid: "bseXXXXXXXX"
+    tableid: "tblXXXXXXXX"
+
+# Base IDs and Table IDs can be found in the URL when viewing tables in Teable
+# Base IDs start with "bse" and Table IDs start with "tbl"

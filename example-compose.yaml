@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  teablewatcher:
+    image: ghcr.io/littlebitstudios/teablewatcher:latest
+    container_name: teablewatcher
+    restart: unless_stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
